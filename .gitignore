@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+.env
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Data / Artifacts
+data/
+logs/
+artifacts/
+checkpoints/
+
+# OS
+.DS_Store

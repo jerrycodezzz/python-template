@@ -1,0 +1,27 @@
+repos:
+  # 1) Black: 코드 자동 포맷터
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black
+
+  # 2) isort: import 정렬
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        args: [--profile=black]
+
+  # 3) Ruff: 린터(ESLint 대응). --fix로 자동 수정 시도
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.8
+    hooks:
+      - id: ruff
+        args: [--fix]
+
+  # 4) 형식 검사(선택): YAML/JSON 기본 체크
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
